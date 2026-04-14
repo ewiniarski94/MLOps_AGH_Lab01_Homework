@@ -1,0 +1,28 @@
+[project]
+name = "mlops-agh-lab01-homework"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "clean-text>=0.7.1",
+    "joblib>=1.5.3",
+    "pre-commit>=4.5.1",
+    "scikit-learn>=1.8.0",
+    "sentence-transformers>=5.4.1",
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.3",
+]
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+explicit = true
+
+[tool.uv.sources]
+torch = [{ index = "pytorch-cpu" }]
+torchvision = [{ index = "pytorch-cpu" }]
